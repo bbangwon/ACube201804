@@ -1,12 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide", "Genocide.csproj", "{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide.Plugins", "Genocide.Plugins.csproj", "{52C0B610-2E26-4AF4-87BE-BC36D9BAB7CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide.Editor", "Genocide.Editor.csproj", "{7092EA92-A9A4-5EA0-20D7-93F1AD2CB42C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C0B610-2E26-4AF4-87BE-BC36D9BAB7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C0B610-2E26-4AF4-87BE-BC36D9BAB7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C0B610-2E26-4AF4-87BE-BC36D9BAB7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C0B610-2E26-4AF4-87BE-BC36D9BAB7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7092EA92-A9A4-5EA0-20D7-93F1AD2CB42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7092EA92-A9A4-5EA0-20D7-93F1AD2CB42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7092EA92-A9A4-5EA0-20D7-93F1AD2CB42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7092EA92-A9A4-5EA0-20D7-93F1AD2CB42C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
