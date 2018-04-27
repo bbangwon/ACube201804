@@ -511,10 +511,9 @@
     <Compile Include="Assets\Plugins\UniRx\Scripts\UnityWinRTBridge\ThreadPoolScheduler_UnityWinRT.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\LINQtoGameObject\README.txt" />
     <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
     <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
-    <None Include="Assets\ProtoShape2D\Readme.txt" />
-    <None Include="Assets\ProtoShape2D\Shaders\TextureAndColors.shader" />
     <None Include="Assets\ThirdParty\DistortFX\Examples\ExamplesTextures\Attributions.txt" />
     <None Include="Assets\ThirdParty\DistortFX\Shaders\DistortFxExampleGlass.shader" />
     <None Include="Assets\ThirdParty\DistortFX\Shaders\DistortFxExampleShield.shader" />

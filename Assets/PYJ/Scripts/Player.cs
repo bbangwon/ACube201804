@@ -6,7 +6,7 @@ using PathologicalGames;
 
 public class Player : MonoBehaviour {
 
-    public GameObject bulletPrefab;
+    //public GameObject bulletPrefab;
     public Transform spawnPosObject;
 
     public GameObject magicParticlePrefab;
@@ -25,14 +25,13 @@ public class Player : MonoBehaviour {
 
     void OnSwipe(Vector3 dir)
     {
-        Debug.Log(dir);
         dir.Normalize();
 
         transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
             
-        Bullet bullet = Instantiate(bulletPrefab, spawnPosObject.position, spawnPosObject.rotation).GetComponent<Bullet>();
+        //Bullet bullet = Instantiate(bulletPrefab, spawnPosObject.position, spawnPosObject.rotation).GetComponent<Bullet>();
 
-        bullet.Shoot(dir * force);
+        //bullet.Shoot(dir * force);
 
         Transform particle = PoolManager.Pools["ParticlePool"].Spawn(magicParticlePrefab.transform, spawnPosObject.position, spawnPosObject.rotation, this.transform);
         particle.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);

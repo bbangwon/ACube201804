@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114793964649241392}
   - component: {fileID: 61466672466564958}
   - component: {fileID: 50496763162611132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: alienBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}

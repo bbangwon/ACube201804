@@ -315,7 +315,7 @@
       <HintPath>/Users/park-yongje/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="ConsolePro.Editor">
-      <HintPath>Assets/ConsolePro/Editor/ConsolePro.Editor.dll</HintPath>
+      <HintPath>Assets/ThirdParty/ConsolePro/Editor/ConsolePro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -338,7 +338,6 @@
     <Compile Include="Assets\Editor\PathologicalGames\Common\PGEditorUtils.cs" />
     <Compile Include="Assets\Editor\PathologicalGames\PoolManager\PreRuntimePoolItemInspector.cs" />
     <Compile Include="Assets\Editor\PathologicalGames\PoolManager\SpawnPoolInspector.cs" />
-    <Compile Include="Assets\ProtoShape2D\Editor\ProtoShape2DEditor.cs" />
     <Compile Include="Assets\ThirdParty\DistortFX\Scripts\Editor\DistortSettingsPropertyDrawer.cs" />
     <Compile Include="Assets\ThirdParty\StompyRobot\SRDebugger\Scripts\Editor\ApiSignup.cs" />
     <Compile Include="Assets\ThirdParty\StompyRobot\SRDebugger\Scripts\Editor\ApiSignupWindow.cs" />
@@ -356,10 +355,9 @@
     <Compile Include="Assets\ThirdParty\StompyRobot\SRF\Scripts\UI\Editor\StyleSheetEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\LINQtoGameObject\README.txt" />
     <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
     <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
-    <None Include="Assets\ProtoShape2D\Readme.txt" />
-    <None Include="Assets\ProtoShape2D\Shaders\TextureAndColors.shader" />
     <None Include="Assets\ThirdParty\DistortFX\Examples\ExamplesTextures\Attributions.txt" />
     <None Include="Assets\ThirdParty\DistortFX\Shaders\DistortFxExampleGlass.shader" />
     <None Include="Assets\ThirdParty\DistortFX\Shaders\DistortFxExampleShield.shader" />

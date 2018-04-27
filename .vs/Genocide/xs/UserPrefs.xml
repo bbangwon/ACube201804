@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PYJ/Scripts/Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PYJ/Scripts/GameManager.cs">
     <Files>
       <File FileName="Assets/PYJ/Scripts/Enum.cs" Line="5" Column="1" />
-      <File FileName="Assets/PYJ/Scripts/Player.cs" Line="29" Column="25" />
+      <File FileName="Assets/PYJ/Scripts/Player.cs" Line="9" Column="7" />
       <File FileName="Assets/PYJ/Scripts/PartsEntity.cs" Line="7" Column="5" />
       <File FileName="Assets/PYJ/Scripts/InputManager.cs" Line="67" Column="10" />
       <File FileName="Assets/PYJ/Scripts/Bullet.cs" Line="14" Column="13" />
-      <File FileName="Assets/PYJ/Scripts/SelfDespawn.cs" Line="21" Column="85" />
-      <File FileName="Assets/PYJ/Scripts/Enemy.cs" Line="19" Column="3" />
+      <File FileName="Assets/PYJ/Scripts/SelfDespawn.cs" Line="22" Column="54" />
+      <File FileName="Assets/Breadone/Script/EnemyController.cs" Line="36" Column="43" />
+      <File FileName="Assets/Breadone/Script/EnemySpawner.cs" Line="39" Column="10" />
+      <File FileName="Assets/PYJ/Scripts/GameManager.cs" Line="12" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
