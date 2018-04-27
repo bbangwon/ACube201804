@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio for Mac
@@ -30,3 +31,25 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide", "Genocide.csproj", "{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+>>>>>>> 40940d2c380b5e01cc34b379df2c4235da9dab0e
