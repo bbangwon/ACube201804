@@ -25,60 +25,72 @@ public class HeroPartsChange : MonoBehaviour {
 
         if (SceneManager.GetActiveScene().name == "main")
         {
-
-
-
-
+            bool time40 = false;
+            bool time20 = false;
+            bool time0 = false;
             gameObject.ObserveEveryValueChanged(_ => GameManager.Instance.timer).Where(_ => (int)_ == 40)
                 .Subscribe(_ =>
                 {
-                    var maxKillEnemyType = EnemyKillInfo.EnemyKillCount.ToList()
-                        .Select((itm, idx) => new { Item = itm, Index = idx }).OrderByDescending(k => k.Item)
-                        .FirstOrDefault().Index;
+                    if(!time40)
+                    {
+                        var maxKillEnemyType = EnemyKillInfo.EnemyKillCount.ToList()
+                            .Select((itm, idx) => new { Item = itm, Index = idx }).OrderByDescending(k => k.Item)
+                            .FirstOrDefault().Index;
 
-                    string prefix = GetSpritePrefix((EnemyController.ENEMY_TYPE)maxKillEnemyType);
-                    string find_sprite_name = prefix + "_head";
+                        string prefix = GetSpritePrefix((EnemyController.ENEMY_TYPE)maxKillEnemyType);
+                        string find_sprite_name = prefix + "_head";
 
-                    headR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == find_sprite_name);
-                    HeroInfo.Instance.parts_head = maxKillEnemyType;
-                    EnemyKillInfo.ResetValues();
+                        headR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == find_sprite_name);
+                        HeroInfo.Instance.parts_head = maxKillEnemyType;
+                        EnemyKillInfo.ResetValues();
+                        time40 = true;
+                    }
+
 
                 });
 
             gameObject.ObserveEveryValueChanged(_ => GameManager.Instance.timer).Where(_ => (int)_ == 20)
                 .Subscribe(_ =>
                 {
-                    var maxKillEnemyType = EnemyKillInfo.EnemyKillCount.ToList()
-                        .Select((itm, idx) => new { Item = itm, Index = idx }).OrderByDescending(k => k.Item)
-                        .FirstOrDefault().Index;
+                    if (!time40)
+                    {
+                        var maxKillEnemyType = EnemyKillInfo.EnemyKillCount.ToList()
+                            .Select((itm, idx) => new { Item = itm, Index = idx }).OrderByDescending(k => k.Item)
+                            .FirstOrDefault().Index;
 
-                    string prefix = GetSpritePrefix((EnemyController.ENEMY_TYPE)maxKillEnemyType);
-                    string find_sprite_name = prefix + "_body";
+                        string prefix = GetSpritePrefix((EnemyController.ENEMY_TYPE)maxKillEnemyType);
+                        string find_sprite_name = prefix + "_body";
 
-                    bodyR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == find_sprite_name);
+                        bodyR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == find_sprite_name);
 
-                    find_sprite_name = prefix + "_arm";
-                    armR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == find_sprite_name);
+                        find_sprite_name = prefix + "_arm";
+                        armR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == find_sprite_name);
 
-                    HeroInfo.Instance.parts_body = maxKillEnemyType;
-                    EnemyKillInfo.ResetValues();
+                        HeroInfo.Instance.parts_body = maxKillEnemyType;
+                        EnemyKillInfo.ResetValues();
+                        time20 = true;
+                    }
 
                 });
 
             gameObject.ObserveEveryValueChanged(_ => GameManager.Instance.timer).Where(_ => (int)_ == 0)
                 .Subscribe(_ =>
                 {
-                    var maxKillEnemyType = EnemyKillInfo.EnemyKillCount.ToList()
-                        .Select((itm, idx) => new { Item = itm, Index = idx }).OrderByDescending(k => k.Item)
-                        .FirstOrDefault().Index;
+                    if (!time0)
+                    {
+                        var maxKillEnemyType = EnemyKillInfo.EnemyKillCount.ToList()
+                            .Select((itm, idx) => new { Item = itm, Index = idx }).OrderByDescending(k => k.Item)
+                            .FirstOrDefault().Index;
 
-                    string prefix = GetSpritePrefix((EnemyController.ENEMY_TYPE)maxKillEnemyType);
-                    string find_sprite_name = prefix + "_leg";
+                        string prefix = GetSpritePrefix((EnemyController.ENEMY_TYPE)maxKillEnemyType);
+                        string find_sprite_name = prefix + "_leg";
 
-                    legR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == find_sprite_name);
+                        legR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == find_sprite_name);
 
-                    HeroInfo.Instance.parts_leg = maxKillEnemyType;
-                    EnemyKillInfo.ResetValues();
+                        HeroInfo.Instance.parts_leg = maxKillEnemyType;
+                        EnemyKillInfo.ResetValues();
+                        time0 = true;
+                    }
                 });
         }
         else if(SceneManager.GetActiveScene().name == "Ending")
