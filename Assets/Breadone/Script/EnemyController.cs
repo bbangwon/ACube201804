@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PathologicalGames;
+using System;
 
 public class EnemyController : MonoBehaviour {
+    public event Action EventDead;
 
     GameObject hero;
 
@@ -14,6 +16,7 @@ public class EnemyController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         hero = GameObject.FindGameObjectWithTag("Player");
+        EventDead += () => { };
 	}
 
     void OnSpawned(){
@@ -42,7 +45,7 @@ public class EnemyController : MonoBehaviour {
     public void Die()
     {
         isDead = true;
-        Debug.Log("DIe");
+        EventDead();
         PoolManager.Pools["MonsterPool"].Despawn(this.transform);
     }
     

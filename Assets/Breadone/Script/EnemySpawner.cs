@@ -9,9 +9,16 @@ public class EnemySpawner : MonoBehaviour {
 
     public GameObject[] EnemyPrefabs;
 
+    public int totalWave = 0;
+    public int wave = 0;
 
-    public int minSpawnCnt = 1;
-    public int maxSpawnCnt = 5;
+    public int minSpawnCntPerOnce = 1;
+    public int maxSpawnCntPerOnce = 5;
+
+    public int spawnCnt = 0;
+    public int maxSpawnCnt = 300;
+
+    public float spawnDelay = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -41,10 +48,20 @@ public class EnemySpawner : MonoBehaviour {
 
     IEnumerator SpawnTest()
     {
-        for (int i = 0; i < 60; i++)
-        {
-            EnemySpawn(Random.Range(minSpawnCnt++, maxSpawnCnt++));
-            yield return new WaitForSeconds(1f);
+        while(enabled && gameObject.activeSelf){
+            if(maxSpawnCnt > spawnCnt)
+            {
+                totalWave++;
+                wave++;
+                spawnCnt++;
+                if(wave % 3 == 0){
+                    minSpawnCntPerOnce++;
+                    maxSpawnCntPerOnce++;
+                }
+
+                EnemySpawn(Random.Range(minSpawnCntPerOnce, maxSpawnCntPerOnce));
+                yield return new WaitForSeconds(spawnDelay);
+            }
         }
     }
     

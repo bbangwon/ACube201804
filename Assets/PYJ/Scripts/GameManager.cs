@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    static GameManager instance;
+    public static GameManager Instance{
+        get { return instance; }
+    }
 
     public float minOrthoSize = 3;
     public float maxOrthoSize = 9;
     public float timer = 60f;
+    public int killCnt = 0;
 
 	void Start () {
         Camera.main.orthographicSize = minOrthoSize;
