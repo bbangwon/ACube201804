@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TitleSceneManager : MonoBehaviour {
 
+    public GameObject creditui;
+
 	// Use this for initialization
 	void Start () {
         ACubeGameJamRankSystem.Instance.getOrCreateGameID("Genocide", "제노사이드", (r) =>
@@ -21,5 +23,15 @@ public class TitleSceneManager : MonoBehaviour {
     public void OnStartGame()
     {
         SceneManager.LoadScene("selectWeapon");
+    }
+
+     public void OpenCreditUI()
+    {
+        creditui.SetActive(true);
+    }
+
+    public void CloseCreditUI()
+    {
+        creditui.SetActive(false);
     }
 }
