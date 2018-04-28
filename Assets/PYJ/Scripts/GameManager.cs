@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour {
     public float timer = 60f;
     public int killCnt = 0;
 
+	private void Awake()
+	{
+        instance = this;
+	}
+
 	void Start () {
         Camera.main.orthographicSize = minOrthoSize;
 

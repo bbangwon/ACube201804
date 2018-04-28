@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio for Mac
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide", "Genocide.csproj", "{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide.Plugins", "Genocide.Plugins.csproj", "{52C0B610-2E26-4AF4-87BE-BC36D9BAB7CA}"

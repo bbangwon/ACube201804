@@ -6,6 +6,10 @@ using Unity.Linq;
 using PathologicalGames;
 
 public class EnemySpawner : MonoBehaviour {
+    static EnemySpawner instance;
+    public static EnemySpawner Instance{
+        get { return instance; }
+    }
 
     public GameObject[] EnemyPrefabs;
 
@@ -62,6 +66,7 @@ public class EnemySpawner : MonoBehaviour {
                 EnemySpawn(Random.Range(minSpawnCntPerOnce, maxSpawnCntPerOnce));
                 yield return new WaitForSeconds(spawnDelay);
             }
+            yield return null;
         }
     }
     

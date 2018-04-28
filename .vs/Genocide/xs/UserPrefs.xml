@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Breadone/Script/EnemySpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PYJ/Scripts/GameManager.cs">
     <Files>
       <File FileName="Assets/PYJ/Scripts/Enum.cs" Line="5" Column="1" />
       <File FileName="Assets/PYJ/Scripts/Player.cs" Line="26" Column="30" />
