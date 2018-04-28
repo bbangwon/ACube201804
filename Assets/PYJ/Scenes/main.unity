@@ -215,6 +215,7 @@ MonoBehaviour:
   beginTrigger: {fileID: 0}
   radius: 4
   isSwiping: 0
+  inputDelay: 0.02
 --- !u!4 &141178245
 Transform:
   m_ObjectHideFlags: 0
@@ -735,7 +736,7 @@ MonoBehaviour:
   _dontDestroyOnLoad: 0
   logMessages: 0
   _perPrefabPoolOptions:
-  - prefab: {fileID: 4596247466238710, guid: f644a30588ee6294b93fb327d6e956b0, type: 2}
+  - prefab: {fileID: 4369396774586684, guid: bb92359903e104645a8d9bdc5456ef8b, type: 2}
     preloadAmount: 10
     preloadTime: 0
     preloadFrames: 2
@@ -749,7 +750,35 @@ MonoBehaviour:
     cullMaxPerPass: 5
     _logMessages: 0
     spawnPool: {fileID: 0}
-  - prefab: {fileID: 4506050207260518, guid: 9296be6c9cac4fe418594cc84bba3b37, type: 2}
+  - prefab: {fileID: 4648229534980304, guid: 323869c2cd4c504488a9de9290a9a87d, type: 2}
+    preloadAmount: 10
+    preloadTime: 0
+    preloadFrames: 2
+    preloadDelay: 0
+    limitInstances: 0
+    limitAmount: 100
+    limitFIFO: 0
+    cullDespawned: 0
+    cullAbove: 50
+    cullDelay: 60
+    cullMaxPerPass: 5
+    _logMessages: 0
+    spawnPool: {fileID: 0}
+  - prefab: {fileID: 4345241213681704, guid: 5443ce2a7fc9bf849837dd87d3086a04, type: 2}
+    preloadAmount: 10
+    preloadTime: 0
+    preloadFrames: 2
+    preloadDelay: 0
+    limitInstances: 0
+    limitAmount: 100
+    limitFIFO: 0
+    cullDespawned: 0
+    cullAbove: 50
+    cullDelay: 60
+    cullMaxPerPass: 5
+    _logMessages: 0
+    spawnPool: {fileID: 0}
+  - prefab: {fileID: 4504094574867208, guid: 8995ec9cc25cfc943a30dd553df013d7, type: 2}
     preloadAmount: 10
     preloadTime: 0
     preloadFrames: 2
@@ -764,7 +793,7 @@ MonoBehaviour:
     _logMessages: 0
     spawnPool: {fileID: 0}
   - prefab: {fileID: 4206912745631090, guid: 55b2262bdd66cf74280b585cf2f78349, type: 2}
-    preloadAmount: 10
+    preloadAmount: 1
     preloadTime: 0
     preloadFrames: 2
     preloadDelay: 0
@@ -777,8 +806,22 @@ MonoBehaviour:
     cullMaxPerPass: 5
     _logMessages: 0
     spawnPool: {fileID: 0}
-  - prefab: {fileID: 4698839569203234, guid: 393525ef9e278b442bcde1c61be02697, type: 2}
-    preloadAmount: 10
+  - prefab: {fileID: 4884760460359848, guid: b8f446e52c1f89d43a8178e565724eb6, type: 2}
+    preloadAmount: 1
+    preloadTime: 0
+    preloadFrames: 2
+    preloadDelay: 0
+    limitInstances: 0
+    limitAmount: 100
+    limitFIFO: 0
+    cullDespawned: 0
+    cullAbove: 50
+    cullDelay: 60
+    cullMaxPerPass: 5
+    _logMessages: 0
+    spawnPool: {fileID: 0}
+  - prefab: {fileID: 4061729800820468, guid: 23556e10ced1d664f9206c234caedd8a, type: 2}
+    preloadAmount: 1
     preloadTime: 0
     preloadFrames: 2
     preloadDelay: 0
@@ -2179,10 +2222,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrSpawnPos: []
   EnemyPrefabs:
-  - {fileID: 1981756124020124, guid: 393525ef9e278b442bcde1c61be02697, type: 2}
-  - {fileID: 1665009884215902, guid: f644a30588ee6294b93fb327d6e956b0, type: 2}
-  - {fileID: 1259186945424996, guid: 9296be6c9cac4fe418594cc84bba3b37, type: 2}
+  - {fileID: 1501841632389232, guid: bb92359903e104645a8d9bdc5456ef8b, type: 2}
+  - {fileID: 1573060011324588, guid: 323869c2cd4c504488a9de9290a9a87d, type: 2}
+  - {fileID: 1752060256784350, guid: 5443ce2a7fc9bf849837dd87d3086a04, type: 2}
+  - {fileID: 1523294042750772, guid: 8995ec9cc25cfc943a30dd553df013d7, type: 2}
   - {fileID: 1740515573411104, guid: 55b2262bdd66cf74280b585cf2f78349, type: 2}
+  - {fileID: 1942169832982704, guid: b8f446e52c1f89d43a8178e565724eb6, type: 2}
+  - {fileID: 1783871963840938, guid: 23556e10ced1d664f9206c234caedd8a, type: 2}
   totalWave: 0
   wave: 0
   minSpawnCntPerOnce: 1
