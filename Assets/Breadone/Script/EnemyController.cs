@@ -5,8 +5,6 @@ using PathologicalGames;
 using System;
 
 public class EnemyController : MonoBehaviour {
-    public event Action EventDead;
-
     GameObject hero;
 
     public float moveSpeed = 5f;
@@ -16,13 +14,12 @@ public class EnemyController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         hero = GameObject.FindGameObjectWithTag("Player");
-        EventDead += () => { };
 	}
 
     void OnSpawned(){
         isDead = false;
     }
-	
+
     private void LateUpdate()
     {
         Vector3 dir = (hero.transform.position - transform.position).normalized; 
@@ -45,10 +42,9 @@ public class EnemyController : MonoBehaviour {
     public void Die()
     {
         isDead = true;
-        EventDead();
+        GameManager.Instance.killCnt++;
         PoolManager.Pools["MonsterPool"].Despawn(this.transform);
-
-        
+        UIManager.Insatnce.UpdateKillCnt();
     }
     
 
