@@ -79,7 +79,9 @@ public class InputManager : MonoBehaviour {
             endTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             Vector3 diffVector = beginTouchPoint - endTouchPoint;
-            EventSwipe(-diffVector);
+            if (diffVector.sqrMagnitude > 2f){
+                EventSwipe(-diffVector);
+            }
         }
     }
 }
