@@ -9,7 +9,9 @@ public struct SoundInfo
 {
     public enum Sounds
     {
-        MONSTER_DIE
+        MONSTER_DIE,
+        GAME_CLEAR,
+        GAME_FAIL
     }
 
     public Sounds whatSound;

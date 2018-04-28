@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PathologicalGames;
+using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour {
@@ -105,6 +106,9 @@ public class Player : MonoBehaviour {
 
     public void Die(){
         isDead = true;
+        HeroInfo.Instance.TotalKills = GameManager.Instance.killCnt;
+        HeroInfo.Instance.clearGame = false;
+        SceneManager.LoadScene("Ending");
         Debug.Log("Dead");
     }
 }

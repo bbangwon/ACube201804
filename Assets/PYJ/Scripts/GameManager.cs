@@ -57,6 +57,12 @@ public class GameManager : MonoBehaviour {
         }
         float ratio = 1 - (timer / 60f);
 
+        if(timer <= 0f)
+        {
+            HeroInfo.Instance.TotalKills = killCnt;
+            HeroInfo.Instance.clearGame = true;
+        }
+
         EnemyController.moveSpeed = EnemyController.initMoveSpeed + ((60 - Instance.timer) * 0.01f) + ((Instance.killCnt / 100) * 0.1f);
 
 

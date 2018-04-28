@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Linq;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndingSceneManager : MonoBehaviour {
 
@@ -12,8 +13,16 @@ public class EndingSceneManager : MonoBehaviour {
         gameObject.Child("KillCount").GetComponent<Text>().text = HeroInfo.Instance.TotalKills.ToString();
         gameObject.Child("Name").GetComponent<Text>().text = HeroInfo.Instance.HeroName;
 
-        MakeHero();
+        if(HeroInfo.Instance.clearGame)
+        {
+            SoundManager.Instance.Play(gameObject, SoundInfo.Sounds.GAME_CLEAR);
+        }
+        else
+        {
+            SoundManager.Instance.Play(gameObject, SoundInfo.Sounds.GAME_FAIL);
+        }
 
+        MakeHero();
 
         ACubeGameJamRankSystem.Instance.postScore(HeroInfo.Instance.HeroName, HeroInfo.Instance.TotalKills, (r) =>
         {
@@ -22,11 +31,6 @@ public class EndingSceneManager : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void MakeHero()
     {
         //히어로 만들고
@@ -43,5 +47,13 @@ public class EndingSceneManager : MonoBehaviour {
         //서버로 전송
 
 
+    }
+
+    public void OnRetry()
+    {
+        HeroInfo.Instance.TotalKills = 0;
+        HeroInfo.Instance.HeroName = "";
+
+        SceneManager.LoadScene("title");
     }
 }

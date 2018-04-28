@@ -5,6 +5,20 @@ using PathologicalGames;
 using System;
 
 public class EnemyController : MonoBehaviour {
+
+    public enum ENEMY_TYPE
+    {
+        DUCK,
+        JACK,
+        LEGO,
+        NUTCRACKER,
+        ROBOT,
+        SNOWMAN,
+        TREE
+    }
+
+    public ENEMY_TYPE enemyType;
+
     GameObject hero;
 
     public static float initMoveSpeed = 0.8f;
@@ -68,6 +82,8 @@ public class EnemyController : MonoBehaviour {
     {
         isDead = true;
         GameManager.Instance.killCnt++;
+        EnemyKillInfo.EnemyKillCount[(int)enemyType]++;
+
         UIManager.Insatnce.UpdateKillCnt(GameManager.Instance.killCnt);
 
         SoundManager.Instance.Play(gameObject, SoundInfo.Sounds.MONSTER_DIE);
