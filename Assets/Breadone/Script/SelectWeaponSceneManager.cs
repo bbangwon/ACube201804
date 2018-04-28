@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class SelectWeaponSceneManager : MonoBehaviour {
 
@@ -41,7 +42,14 @@ public class SelectWeaponSceneManager : MonoBehaviour {
 
         ACubeGameJamRankSystem.Instance.getOrCreateNickname(heroName, (r) =>
         {
-            Debug.Log(r.message);
+            if(r.result)
+            {
+                SceneManager.LoadScene("main");
+            }
+            else
+            {
+                Debug.Log(r.message);
+            }
         });
     }
 }

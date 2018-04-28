@@ -39,12 +39,14 @@ public class SoundManager : Singleton<SoundManager> {
         base.Awake();
     }
 
-    public void Play(Soundable soundable, SoundInfo.Sounds sound)
+    public void Play(GameObject soundable, SoundInfo.Sounds sound)
     {
         var soundClip = soundInfo.Where(_ => _.whatSound == sound).OrderBy(_ => Random.value).FirstOrDefault();
 
-        if(soundClip.audioClip != default(AudioClip))
-            soundable.GetComponent<AudioSource>().PlayOneShot(soundClip.audioClip);
+        if (soundClip.audioClip != default(AudioClip))
+        {
+            AudioSource.PlayClipAtPoint(soundClip.audioClip, Camera.main.transform.position);
+        }
     }
 
 }
