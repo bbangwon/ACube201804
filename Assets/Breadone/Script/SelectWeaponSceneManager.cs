@@ -28,10 +28,20 @@ public class SelectWeaponSceneManager : MonoBehaviour {
             Item = item
         }).FirstOrDefault(_ => _.Item.isOn).Index;
 
-
         var heroName = heroNameIF.text;
+        if(heroName.Length == 0)
+        {
+            Debug.Log("이름을 적어주세요!");
+            return;
+        }
+
 
         HeroInfo.Instance.HeroName = heroName;
         HeroInfo.Instance.WeaponIndex = itemIndex;
+
+        ACubeGameJamRankSystem.Instance.getOrCreateNickname(heroName, (r) =>
+        {
+            Debug.Log(r.message);
+        });
     }
 }
