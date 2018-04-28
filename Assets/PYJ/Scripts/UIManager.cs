@@ -9,12 +9,17 @@ public class UIManager : MonoBehaviour {
         get { return instance; }
     }
 
+    Player player;
+
     public Text textDebugSpawnCnt;
     public Text textKillCnt;
     public Text textKill;
     public Image panelKill;
 
     public Text textTimer;
+    public Image imgTimer;
+
+    public Slider sliderHP;
 
     EnemySpawner spawner;
 
@@ -26,6 +31,7 @@ public class UIManager : MonoBehaviour {
 	private void Start()
 	{
         spawner = FindObjectOfType<EnemySpawner>();
+        player = FindObjectOfType<Player>();
 	}
 
 	private void Update()
@@ -34,6 +40,8 @@ public class UIManager : MonoBehaviour {
         textKill.transform.localScale = Vector3.Lerp(textKillCnt.transform.localScale, Vector3.one, 0.1f);
         panelKill.transform.localScale = Vector3.Lerp(panelKill.transform.localScale, Vector3.one, 0.1f);
         textKillCnt.transform.localScale = Vector3.Lerp(textKill.transform.localScale, Vector3.one, 0.1f);
+
+        imgTimer.fillAmount = GameManager.Instance.timer / 60f;
 	}
 
     Vector3 targetScale = Vector3.zero;
@@ -56,6 +64,10 @@ public class UIManager : MonoBehaviour {
             }
         }
         textKillCnt.text = GameManager.Instance.killCnt.ToString();
+    }
+
+    public void UpdateHP(float hp){
+        sliderHP.value = hp / player.maxHp;
     }
 
     public void UpdateTimer(int time){
