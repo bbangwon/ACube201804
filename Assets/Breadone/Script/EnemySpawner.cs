@@ -18,8 +18,10 @@ public class EnemySpawner : MonoBehaviour {
     public int totalWave = 0;
     public int wave = 0;
 
-    public int minSpawnCntPerOnce = 1;
+    public int minSpawnCntPerOnce = 3;
     public int maxSpawnCntPerOnce = 5;
+
+    public int addSpawnCntByKill = 0;
 
     public int spawnCnt = 0;
     public int maxSpawnCnt = 300;
@@ -45,12 +47,14 @@ public class EnemySpawner : MonoBehaviour {
         float size = Camera.main.orthographicSize;
         float halfWidth = size * 1.77f;
 
-        Debug.Log(arrSpawnPos.Length);
         for (int i = 0; i < arrSpawnPos.Length; i++)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, (360f / arrSpawnPos.Length) * i));
-            arrSpawnPos[i].localPosition = transform.right * (halfWidth + 5f);
+            Vector3 targetPos = transform.right * (halfWidth + 5f);
+            targetPos.y = targetPos.y * 0.7f;
+            arrSpawnPos[i].localPosition = targetPos;
         }
+        transform.rotation = Quaternion.identity;
 	}
 
     //spawnPoint가 -1일경우 랜덤한 위치에서 적 등장.
@@ -80,7 +84,10 @@ public class EnemySpawner : MonoBehaviour {
                     maxSpawnCntPerOnce++;
                 }
 
-                EnemySpawn(Random.Range(minSpawnCntPerOnce, maxSpawnCntPerOnce));
+                addSpawnCntByKill = GameManager.Instance.killCnt / 100;
+
+                EnemySpawn(Random.Range(minSpawnCntPerOnce + addSpawnCntByKill, maxSpawnCntPerOnce + addSpawnCntByKill));
+                spawnDelay = 1 - (60 - GameManager.Instance.timer) * 0.01f;
                 yield return new WaitForSeconds(spawnDelay);
             }
             yield return null;

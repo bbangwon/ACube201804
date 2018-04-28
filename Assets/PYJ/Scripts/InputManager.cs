@@ -51,12 +51,13 @@ public class InputManager : MonoBehaviour {
                 beginTouchPoint = touch.position;
             }
         }
-        if (Input.GetMouseButtonDown(0))
+        else
         {
-            beginTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (Input.GetMouseButtonDown(0))
+            {
+                beginTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            }
         }
-
-
     }
 
     private void OnMouseUp()
@@ -74,13 +75,17 @@ public class InputManager : MonoBehaviour {
                 endTouchPoint = touch.position;
             }
         }
-        if (Input.GetMouseButtonUp(0))
+        else
         {
-            endTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (Input.GetMouseButtonUp(0))
+            {
+                endTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            Vector3 diffVector = beginTouchPoint - endTouchPoint;
-            if (diffVector.sqrMagnitude > 2f){
-                EventSwipe(-diffVector);
+                Vector3 diffVector = beginTouchPoint - endTouchPoint;
+                if (diffVector.sqrMagnitude > 0.5f)
+                {
+                    EventSwipe(-diffVector);
+                }
             }
         }
     }

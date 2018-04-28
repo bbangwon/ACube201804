@@ -14,7 +14,7 @@ public class SelfDespawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Observable.IntervalFrame(180)
+        Observable.IntervalFrame(360)
                   .First()
                   .Subscribe(_ =>
                   {

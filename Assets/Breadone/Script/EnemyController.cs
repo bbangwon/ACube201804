@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour {
 
     private void LateUpdate()
     {
+        moveSpeed = 1 + (60 - GameManager.Instance.timer) * 0.01f;
         Vector3 dir = (hero.transform.position - transform.position).normalized; 
         transform.Translate(dir * Time.deltaTime * moveSpeed);
     }
