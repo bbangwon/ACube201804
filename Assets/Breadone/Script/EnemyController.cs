@@ -7,7 +7,8 @@ using System;
 public class EnemyController : MonoBehaviour {
     GameObject hero;
 
-    public float moveSpeed = 5f;
+    public static float initMoveSpeed = 0.8f;
+    public static float moveSpeed = 1f;
 
     public bool isDead = false;
 
@@ -22,7 +23,6 @@ public class EnemyController : MonoBehaviour {
 
     private void LateUpdate()
     {
-        moveSpeed = 1 + (60 - GameManager.Instance.timer) * 0.01f;
         Vector3 dir = (hero.transform.position - transform.position).normalized; 
         transform.Translate(dir * Time.deltaTime * moveSpeed);
     }

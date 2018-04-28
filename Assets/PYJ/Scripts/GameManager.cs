@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour {
         timer -= Time.deltaTime;
         float ratio = 1 - (timer / 60f);
 
+        EnemyController.moveSpeed = EnemyController.initMoveSpeed + ((60 - Instance.timer) * 0.01f) + ((Instance.killCnt / 100) * 0.1f);
+
+
         //3 - 9
         Camera.main.orthographicSize = minOrthoSize + (maxOrthoSize - minOrthoSize) * ratio;
 	}

@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour {
     Vector2 endTouchPoint;
 
     public float radius = 2f;
-    float deadTime = 0.5f;
+    float deadTime = 1f;
     public bool isSwiping = false;
 
 	private void Awake()
@@ -36,7 +36,40 @@ public class InputManager : MonoBehaviour {
         if(deadTime <= 0f){
             isSwiping = false;
         }
-	}
+
+        if (isSwiping == false)
+        {
+            return;
+        }
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Ended)
+            {
+                endTouchPoint = touch.position;
+                Vector3 diffVector = beginTouchPoint - endTouchPoint;
+                if (diffVector.sqrMagnitude > 0.3f)
+                {
+                    EventSwipe(-diffVector);
+                    isSwiping = false;
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                endTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 diffVector = beginTouchPoint - endTouchPoint;
+                if (diffVector.sqrMagnitude > 0.3f)
+                {
+                    EventSwipe(-diffVector);
+                    isSwiping = false;
+                }
+            }
+        }
+    }
 
 	private void OnMouseDown()
     {
@@ -56,36 +89,6 @@ public class InputManager : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 beginTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            }
-        }
-    }
-
-    private void OnMouseUp()
-    {
-        
-        if(isSwiping == false){
-            return;
-        }
-
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Ended)
-            {
-                endTouchPoint = touch.position;
-            }
-        }
-        else
-        {
-            if (Input.GetMouseButtonUp(0))
-            {
-                endTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                Vector3 diffVector = beginTouchPoint - endTouchPoint;
-                if (diffVector.sqrMagnitude > 0.5f)
-                {
-                    EventSwipe(-diffVector);
-                }
             }
         }
     }
