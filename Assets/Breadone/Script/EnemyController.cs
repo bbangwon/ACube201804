@@ -44,7 +44,7 @@ public class EnemyController : MonoBehaviour {
         isDead = true;
         GameManager.Instance.killCnt++;
         PoolManager.Pools["MonsterPool"].Despawn(this.transform);
-        UIManager.Insatnce.UpdateKillCnt();
+        UIManager.Insatnce.UpdateKillCnt(GameManager.Instance.killCnt);
     }
     
 

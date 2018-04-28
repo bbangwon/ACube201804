@@ -11,6 +11,8 @@ public class EnemySpawner : MonoBehaviour {
         get { return instance; }
     }
 
+    public Transform[] arrSpawnPos;
+
     public GameObject[] EnemyPrefabs;
 
     public int totalWave = 0;
@@ -24,16 +26,31 @@ public class EnemySpawner : MonoBehaviour {
 
     public float spawnDelay = 1f;
 
-	// Use this for initialization
+	private void Awake()
+	{
+        arrSpawnPos = new Transform[transform.childCount];
+        for (int i = 0; i < arrSpawnPos.Length; i++)
+        {
+            arrSpawnPos[i] = transform.GetChild(i);
+        }
+    }
+
+    // Use this for initialization
 	void Start () {
-
         StartCoroutine(SpawnTest());
-
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        float size = Camera.main.orthographicSize;
+        float halfWidth = size * 1.77f;
+
+        Debug.Log(arrSpawnPos.Length);
+        for (int i = 0; i < arrSpawnPos.Length; i++)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, (360f / arrSpawnPos.Length) * i));
+            arrSpawnPos[i].localPosition = transform.right * (halfWidth + 5f);
+        }
 	}
 
     //spawnPoint가 -1일경우 랜덤한 위치에서 적 등장.

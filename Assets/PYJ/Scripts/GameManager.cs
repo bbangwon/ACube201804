@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour {
         get { return instance; }
     }
 
-    public float minOrthoSize = 3;
-    public float maxOrthoSize = 9;
+    public float minOrthoSize = 2f;
+    public float maxOrthoSize = 9f;
     public float timer = 60f;
     public int killCnt = 0;
 
@@ -25,9 +25,10 @@ public class GameManager : MonoBehaviour {
 	}
 
     IEnumerator CoTimer(){
+        yield return new WaitForSeconds(1f);
         while(enabled && gameObject.activeSelf){
             yield return new WaitForSeconds(1f);
-
+            UIManager.Insatnce.UpdateTimer((int)timer);
         }
     }
 
