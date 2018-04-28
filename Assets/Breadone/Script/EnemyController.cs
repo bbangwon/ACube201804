@@ -47,6 +47,8 @@ public class EnemyController : MonoBehaviour {
         isDead = true;
         EventDead();
         PoolManager.Pools["MonsterPool"].Despawn(this.transform);
+
+        
     }
     
 
