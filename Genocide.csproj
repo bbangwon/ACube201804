@@ -236,6 +236,9 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -244,9 +247,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Breadone\GJRankSystem\ACubeGameJamRankSystem.cs" />
+    <Compile Include="Assets\Breadone\GJRankSystem\GJRankSystem.cs" />
+    <Compile Include="Assets\Breadone\GJRankSystem\GJRankTest.cs" />
     <Compile Include="Assets\Breadone\Script\EnemyController.cs" />
     <Compile Include="Assets\Breadone\Script\EnemySpawner.cs" />
-    <Compile Include="Assets\Breadone\Script\PNGTool.cs" />
+    <Compile Include="Assets\Breadone\Script\postAvatarTest.cs" />
     <Compile Include="Assets\LINQtoGameObject\Examples\SampleSceneScript.cs" />
     <Compile Include="Assets\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs" />
     <Compile Include="Assets\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs" />
