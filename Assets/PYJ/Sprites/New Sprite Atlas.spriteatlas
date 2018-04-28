@@ -27,10 +27,45 @@ SpriteAtlas:
       enableRotation: 1
       enableTightPacking: 1
     variantMultiplier: 1
-    packables: []
+    packables:
+    - {fileID: 102900000, guid: 715859b7c15d14108b7f6092b612f100, type: 3}
+    - {fileID: 2800000, guid: 3a5e1892f85084f4990d9caf5a9222e3, type: 3}
+    - {fileID: 2800000, guid: a00c54a7f2627416bb43681c2a7b6f1a, type: 3}
+    - {fileID: 2800000, guid: b5aa9942337a81d44bb9fe53cb6a52a9, type: 3}
+    - {fileID: 2800000, guid: 2b99cfb448122f442ada6a2d8ac6eef5, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 2b99cfb448122f442ada6a2d8ac6eef5, type: 3}
+  - {fileID: 21300004, guid: b5aa9942337a81d44bb9fe53cb6a52a9, type: 3}
+  - {fileID: 21300006, guid: b5aa9942337a81d44bb9fe53cb6a52a9, type: 3}
+  - {fileID: 21300000, guid: b5aa9942337a81d44bb9fe53cb6a52a9, type: 3}
+  - {fileID: 21300002, guid: b5aa9942337a81d44bb9fe53cb6a52a9, type: 3}
+  - {fileID: 21300000, guid: 91ba76c090627473d8b8b531bbe08766, type: 3}
+  - {fileID: 21300000, guid: 67642591760fc426ebb46f2ebf4a6939, type: 3}
+  - {fileID: 21300000, guid: df040283363c141199c9ef7a5977682c, type: 3}
+  - {fileID: 21300000, guid: fd9261463e4134858be75753bb0fad8b, type: 3}
+  - {fileID: 21300000, guid: d9a2da070a9a645e8bfe38ec811cf50e, type: 3}
+  - {fileID: 21300000, guid: 59ba213c92ec145eb8278d1a6eaca6f7, type: 3}
+  - {fileID: 21300000, guid: 7171673fa77ba4ab5a49342172c9887f, type: 3}
+  - {fileID: 21300000, guid: 6bc5fddf95375485c8ad184fc0b83905, type: 3}
+  - {fileID: 21300000, guid: 3a5e1892f85084f4990d9caf5a9222e3, type: 3}
+  - {fileID: 21300000, guid: a00c54a7f2627416bb43681c2a7b6f1a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Tile
+  - robot_body
+  - robot_leg
+  - robot_head
+  - robot_arm
+  - Flower_0
+  - Flower_1
+  - Flower_5
+  - Flower_7
+  - Flower_3
+  - Flower_4
+  - Flower_6
+  - Flower_2
+  - Circle
+  - Square
   m_Tag: New Sprite Atlas
   m_IsVariant: 0

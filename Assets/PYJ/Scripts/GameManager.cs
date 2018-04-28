@@ -9,11 +9,14 @@ public class GameManager : MonoBehaviour {
     }
 
     public float minOrthoSize = 2f;
-    public float maxOrthoSize = 9f;
+    public float maxOrthoSize = 12f;
     public float timer = 60f;
     public int killCnt = 0;
 
     public bool isCalcTimer = false;
+
+    public Transform flowers;
+    public GameObject[] arrFlower;
 
 	private void Awake()
 	{
@@ -24,7 +27,16 @@ public class GameManager : MonoBehaviour {
         Camera.main.orthographicSize = minOrthoSize;
 
         StartCoroutine(CoTimer());
-	}
+
+        float halfHeight = 13f;
+        float halfWidth = 13f * (16f / 9f);
+
+        for (int i = 0; i < 150; i++)
+        {
+            GameObject go = Instantiate(arrFlower[Random.Range(0, arrFlower.Length)], new Vector3(Random.Range(-halfWidth, halfWidth), Random.Range(-halfHeight, halfHeight), 0f), Quaternion.identity, flowers);
+            go.transform.localScale = Vector3.one * Random.Range(1.5f, 3f);
+        }
+    }
 
     IEnumerator CoTimer(){
         yield return new WaitForSeconds(1f);

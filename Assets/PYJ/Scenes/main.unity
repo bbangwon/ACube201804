@@ -260,6 +260,16 @@ MonoBehaviour:
   timer: 60
   killCnt: 0
   isCalcTimer: 0
+  flowers: {fileID: 0}
+  arrFlower:
+  - {fileID: 1786592196943174, guid: feb2b9d05a19c4792a5a417bc0e05f68, type: 2}
+  - {fileID: 1210697474795478, guid: b2ece4848cfa14210acf37bfacffec8c, type: 2}
+  - {fileID: 1836536120107046, guid: bf23adfaf6e1545d48453859cff1f4ca, type: 2}
+  - {fileID: 1260070922116514, guid: d19b4e1accf0a4bdc8a4463f5f7b68fd, type: 2}
+  - {fileID: 1874987900144670, guid: 3ec00cefd8351437da9e12d1b1ce22d2, type: 2}
+  - {fileID: 1665417681698348, guid: 7798d7a2773b84fa3a81ac3f63d731e0, type: 2}
+  - {fileID: 1036792516266534, guid: c5353df5bc40345429e747f696dc26e0, type: 2}
+  - {fileID: 1136997255395844, guid: 7b495fdc5835b4a6681b258ca32e5b5d, type: 2}
 --- !u!4 &158968704
 Transform:
   m_ObjectHideFlags: 0
@@ -1136,6 +1146,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 768407837}
+--- !u!1 &904541809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 904541810}
+  m_Layer: 0
+  m_Name: Flowers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &904541810
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 904541809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0992424, y: -0.7250053, z: -0.004411727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932038074
 GameObject:
   m_ObjectHideFlags: 0
