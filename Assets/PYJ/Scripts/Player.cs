@@ -53,9 +53,9 @@ public class Player : MonoBehaviour {
         }
 
         particleStartSpeed = 1 + (killCnt / 10) * 0.1f;
-        particleCycleCnt = Mathf.Min(1 + (killCnt / 300), 3);
+        particleCycleCnt = Mathf.Min(1 + (killCnt / 250), 3);
         particleBurstCnt = 3 + (killCnt / 10) - ((particleCycleCnt - 1) * 10);
-        particleHalfAngle = 2f + (killCnt / 25);
+        particleHalfAngle = 2f + (killCnt / 30);
     }
 
     void OnSwipe(Vector3 dir)
