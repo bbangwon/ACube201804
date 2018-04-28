@@ -86,7 +86,7 @@ public class EnemySpawner : MonoBehaviour {
                 }
 
                 addSpawnCntByKill = GameManager.Instance.killCnt / 50;
-                maxSpawnCnt = Mathf.Min(200 + GameManager.Instance.killCnt / 2, 800);
+                maxSpawnCnt = Mathf.Min(200 + GameManager.Instance.killCnt / 2, 600);
 
                 EnemySpawn(Random.Range(minSpawnCntPerOnce + addSpawnCntByKill, maxSpawnCntPerOnce + addSpawnCntByKill));
                 spawnDelay = 1 - (60 - GameManager.Instance.timer) * 0.01f;
