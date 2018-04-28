@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using PathologicalGames;
 
 public class Explosion : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class Explosion : MonoBehaviour {
 	void Start () {
         DOVirtual.DelayedCall(1f, () =>
         {
-            Destroy(gameObject);
+            PoolManager.Pools["ParticlePool"].Despawn(transform);
         });
 	}
 	

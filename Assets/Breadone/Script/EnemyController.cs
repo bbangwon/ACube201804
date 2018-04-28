@@ -64,7 +64,12 @@ public class EnemyController : MonoBehaviour {
         UIManager.Insatnce.UpdateKillCnt(GameManager.Instance.killCnt);
 
         SoundManager.Instance.Play(gameObject, SoundInfo.Sounds.MONSTER_DIE);
+
+        var exp = PoolManager.Pools["ParticlePool"].Spawn("Explosion");
+        exp.position = this.transform.position;
+
         PoolManager.Pools["MonsterPool"].Despawn(this.transform);
+
     }
 
     public void Attack(){
