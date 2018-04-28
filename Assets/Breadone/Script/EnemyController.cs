@@ -12,6 +12,9 @@ public class EnemyController : MonoBehaviour {
 
     public bool isDead = false;
 
+    public bool isTouchPlayer = false;
+    public float lifeTime = 3f;
+
     // Use this for initialization
     void Start () {
         hero = GameObject.FindGameObjectWithTag("Player");
@@ -19,9 +22,23 @@ public class EnemyController : MonoBehaviour {
 
     void OnSpawned(){
         isDead = false;
+        isTouchPlayer = false;
+        lifeTime = 3f;
     }
 
-    private void LateUpdate()
+	private void Update()
+	{
+        if(isTouchPlayer){
+            if(lifeTime >= 0f){
+                lifeTime -= Time.deltaTime;
+            }
+            else{
+                Attack();
+            }
+        }
+	}
+
+	private void LateUpdate()
     {
         Vector3 dir = (hero.transform.position - transform.position).normalized; 
         transform.Translate(dir * Time.deltaTime * moveSpeed);
@@ -46,6 +63,12 @@ public class EnemyController : MonoBehaviour {
         GameManager.Instance.killCnt++;
         UIManager.Insatnce.UpdateKillCnt(GameManager.Instance.killCnt);
 
+        SoundManager.Instance.Play(gameObject, SoundInfo.Sounds.MONSTER_DIE);
+        PoolManager.Pools["MonsterPool"].Despawn(this.transform);
+    }
+
+    public void Attack(){
+        isDead = true;
         SoundManager.Instance.Play(gameObject, SoundInfo.Sounds.MONSTER_DIE);
         PoolManager.Pools["MonsterPool"].Despawn(this.transform);
     }

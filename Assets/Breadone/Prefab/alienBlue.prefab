@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212311525232246592}
   - component: {fileID: 114793964649241392}
   - component: {fileID: 61466672466564958}
-  - component: {fileID: 50496763162611132}
+  - component: {fileID: 50832066040768788}
   m_Layer: 9
   m_Name: alienBlue
   m_TagString: Untagged
@@ -43,7 +43,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50496763162611132
+--- !u!50 &50832066040768788
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -99,8 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6866825a82395264fb0680b811ad6516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.8
   isDead: 0
+  isTouchPlayer: 0
+  lifeTime: 3
 --- !u!212 &212311525232246592
 SpriteRenderer:
   m_ObjectHideFlags: 1

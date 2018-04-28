@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
     public float timer = 60f;
     public int killCnt = 0;
 
+    public bool isCalcTimer = false;
+
 	private void Awake()
 	{
         instance = this;
@@ -26,16 +28,20 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator CoTimer(){
         yield return new WaitForSeconds(1f);
+        timer += 0.1f;
         while(enabled && gameObject.activeSelf){
-            yield return new WaitForSeconds(1f);
             UIManager.Insatnce.UpdateTimer((int)timer);
+            isCalcTimer = true;
+            yield return new WaitForSeconds(1f);
         }
     }
 
 	
 	// Update is called once per frame
 	void Update () {
-        timer -= Time.deltaTime;
+        if(isCalcTimer){
+            timer -= Time.deltaTime;
+        }
         float ratio = 1 - (timer / 60f);
 
         EnemyController.moveSpeed = EnemyController.initMoveSpeed + ((60 - Instance.timer) * 0.01f) + ((Instance.killCnt / 100) * 0.1f);

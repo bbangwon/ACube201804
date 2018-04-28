@@ -18,9 +18,16 @@ public class Player : MonoBehaviour {
     int particleBurstCnt = 3;
     float particleHalfAngle = 2f;
 
+    public float maxHp = 100f;
+    public float hp = 100f;
+
+    public bool isDead = false;
+
     // Use this for initialization
 	void Start () {
         InputManager.Instance.EventSwipe += OnSwipe;
+
+        hp = maxHp;
 
         StartCoroutine(CoRefreshAbility());
 	}
@@ -46,13 +53,17 @@ public class Player : MonoBehaviour {
         }
 
         particleStartSpeed = 1 + (killCnt / 10) * 0.1f;
-        particleCycleCnt = 1 + killCnt / 200;
+        particleCycleCnt = 1 + killCnt / 300;
         particleBurstCnt = 3 + (killCnt / 10) - ((particleCycleCnt - 1) * 10);
         particleHalfAngle = 2f + (killCnt / 25);
     }
 
     void OnSwipe(Vector3 dir)
     {
+        if(isDead){
+            return;
+        }
+
         dir.Normalize();
 
         transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
@@ -73,5 +84,27 @@ public class Player : MonoBehaviour {
         burst.cycleCount = particleCycleCnt;
         emission.SetBurst(0, burst);
         particle.Play();
+    }
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+        if(isDead){
+            return;
+        }
+
+        EnemyController enemy = other.GetComponent<EnemyController>();
+        if(enemy){
+            enemy.isTouchPlayer = true;
+            hp -= 1f;
+            UIManager.Insatnce.UpdateHP(hp);
+            if(hp <= 0f){
+                Die();
+            }
+        }
+	}
+
+    public void Die(){
+        isDead = true;
+        Debug.Log("Dead");
     }
 }

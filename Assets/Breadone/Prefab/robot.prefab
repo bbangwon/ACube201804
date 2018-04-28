@@ -162,10 +162,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4206912745631090}
-  - component: {fileID: 50754731683340970}
   - component: {fileID: 61269119627564152}
   - component: {fileID: 114981360689944458}
   - component: {fileID: 95936366721102094}
+  - component: {fileID: 50314844582039576}
   m_Layer: 9
   m_Name: robot
   m_TagString: Untagged
@@ -432,7 +432,7 @@ Transform:
   m_Father: {fileID: 4727003523610572}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50754731683340970
+--- !u!50 &50314844582039576
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -516,8 +516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6866825a82395264fb0680b811ad6516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.8
   isDead: 0
+  isTouchPlayer: 0
+  lifeTime: 3
 --- !u!212 &212092621225607390
 SpriteRenderer:
   m_ObjectHideFlags: 1
