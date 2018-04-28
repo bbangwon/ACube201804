@@ -41,7 +41,7 @@ public class SoundManager : Singleton<SoundManager> {
 
     public void Play(Soundable soundable, SoundInfo.Sounds sound)
     {
-        var soundClip = soundInfo.FirstOrDefault(_ => _.whatSound == sound);
+        var soundClip = soundInfo.Where(_ => _.whatSound == sound).OrderBy(_ => Random.value).FirstOrDefault();
 
         if(soundClip.audioClip != default(AudioClip))
             soundable.GetComponent<AudioSource>().PlayOneShot(soundClip.audioClip);
