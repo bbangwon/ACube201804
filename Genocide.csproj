@@ -313,6 +313,7 @@
     <Compile Include="Assets\Breadone\Script\BodyArmAnimation.cs" />
     <Compile Include="Assets\Breadone\Script\EnemyController.cs" />
     <Compile Include="Assets\Breadone\Script\EnemySpawner.cs" />
+    <Compile Include="Assets\Breadone\Script\Explosion.cs" />
     <Compile Include="Assets\Breadone\Script\HeroInfo.cs" />
     <Compile Include="Assets\Breadone\Script\HeroWeaponChange.cs" />
     <Compile Include="Assets\Breadone\Script\SelectWeaponSceneManager.cs" />

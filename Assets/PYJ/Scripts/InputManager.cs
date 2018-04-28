@@ -13,12 +13,14 @@ public class InputManager : MonoBehaviour {
 
     public CircleCollider2D beginTrigger;
 
-    Vector2 beginTouchPoint;
-    Vector2 endTouchPoint;
+    Vector3 beginTouchPoint;
+    Vector3 endTouchPoint;
 
-    public float radius = 2f;
+    public float radius = 4f;
     float deadTime = 1f;
     public bool isSwiping = false;
+
+    public float inputDelay = 0.02f;
 
 	private void Awake()
 	{
@@ -58,18 +60,16 @@ public class InputManager : MonoBehaviour {
         }
         else
         {
+            if (inputDelay > 0f)
+            {
+                inputDelay -= Time.deltaTime;
+            }
             if (Input.GetMouseButtonUp(0))
             {
                 endTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector3 diffVector = beginTouchPoint - endTouchPoint;
-                if (diffVector.sqrMagnitude > 0.3f)
-                {
-                    EventSwipe(-diffVector);
-                    isSwiping = false;
-                }
             }
         }
-    }
+	}
 
 	private void OnMouseDown()
     {
@@ -86,9 +86,19 @@ public class InputManager : MonoBehaviour {
         }
         else
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                beginTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if(inputDelay <= 0f){
+                if (Input.GetMouseButtonDown(0))
+                {
+                    beginTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                    Vector3 diffVector = transform.position - beginTouchPoint;
+                    if (diffVector.sqrMagnitude > 0.3f)
+                    {
+                        EventSwipe(-diffVector);
+                        isSwiping = false;
+                    }
+                }
+                inputDelay = 0.02f;
             }
         }
     }

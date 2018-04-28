@@ -21,9 +21,14 @@ public class EnemyController : MonoBehaviour {
 	}
 
     void OnSpawned(){
+        EnemySpawner.Instance.spawnCnt++;
         isDead = false;
         isTouchPlayer = false;
         lifeTime = 3f;
+    }
+
+    void OnDespawned(){
+        EnemySpawner.Instance.spawnCnt--;
     }
 
 	private void Update()

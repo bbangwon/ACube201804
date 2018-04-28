@@ -4,14 +4,13 @@
       <File FileName="Assets/PYJ/Scripts/Enum.cs" Line="5" Column="1" />
       <File FileName="Assets/PYJ/Scripts/PartsEntity.cs" Line="7" Column="5" />
       <File FileName="Assets/PYJ/Scripts/InputManager.cs" Line="55" Column="39" />
+      <File FileName="Assets/PYJ/Scripts/GameManager.cs" Line="47" Column="29" />
       <File FileName="Assets/PYJ/Scripts/SelfDespawn.cs" Line="17" Column="37" />
-      <File FileName="Assets/PYJ/Scripts/GameManager.cs" Line="25" Column="1" />
-      <File FileName="Assets/PYJ/Scripts/UIManager.cs" Line="62" Column="42" />
-      <File FileName="Assets/Plugins/PathologicalGames/PoolManager/PoolManager.cs" Line="324" Column="1" />
-      <File FileName="Assets/Breadone/Script/EnemySpawner.cs" Line="70" Column="2" />
+      <File FileName="Assets/PYJ/Scripts/UIManager.cs" Line="49" Column="31" />
+      <File FileName="Assets/Breadone/Script/EnemySpawner.cs" Line="73" Column="6" />
       <File FileName="Assets/Breadone/Script/SoundManager.cs" Line="42" Column="17" />
-      <File FileName="Assets/PYJ/Scripts/Player.cs" Line="80" Column="3" />
-      <File FileName="Assets/Breadone/Script/EnemyController.cs" Line="45" Column="1" />
+      <File FileName="Assets/PYJ/Scripts/Player.cs" Line="58" Column="41" />
+      <File FileName="Assets/Breadone/Script/EnemyController.cs" Line="24" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
