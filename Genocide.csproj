@@ -341,6 +341,7 @@
     <Compile Include="Assets\PYJ\Scripts\Player.cs" />
     <Compile Include="Assets\PYJ\Scripts\SelfDespawn.cs" />
     <Compile Include="Assets\PYJ\Scripts\UIManager.cs" />
+    <Compile Include="Assets\ShakeBody.cs" />
     <Compile Include="Assets\ThirdParty\ConsolePro\ConsoleProDebug.cs" />
     <Compile Include="Assets\ThirdParty\ConsolePro\Remote\ConsoleProRemoteServer.cs" />
     <Compile Include="Assets\ThirdParty\ConsolePro\Remote\LiteNetLib\FastBitConverter.cs" />

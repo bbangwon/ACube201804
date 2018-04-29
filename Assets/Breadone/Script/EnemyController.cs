@@ -40,7 +40,6 @@ public class EnemyController : MonoBehaviour {
         isDead = false;
         isTouchPlayer = false;
         lifeTime = 3f;
-        StartCoroutine(MovingAny());
     }
 
     void OnDespawned(){
@@ -100,19 +99,4 @@ public class EnemyController : MonoBehaviour {
         SoundManager.Instance.Play(gameObject, SoundInfo.Sounds.MONSTER_DIE);
         PoolManager.Pools["MonsterPool"].Despawn(this.transform);
     }
-
-    IEnumerator MovingAny()
-    {
-        int toggle = 1;
-        while(true)
-        {
-            toggle *= -1;
-            transform.localEulerAngles = Vector3.forward * toggle * 10f;
-            yield return new WaitForSeconds(0.1f);
-            transform.localEulerAngles = Vector3.zero;
-            yield return new WaitForSeconds(0.1f);
-        }
-        
-    }
-
 }
