@@ -23,6 +23,12 @@ public class HeroPartsChange : MonoBehaviour {
         armR = gameObject.Child("body").Child("armRot").Child("arm").GetComponent<SpriteRenderer>();
         legR = gameObject.Child("leg").GetComponent<SpriteRenderer>();
 
+        headR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == "lego_head");
+        bodyR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == "lego_body");
+        armR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == "lego_arm");
+        legR.sprite = partsSprites.ToList().FirstOrDefault(p => p.name == "lego_leg");
+
+
         if (SceneManager.GetActiveScene().name == "main")
         {
             bool time40 = false;

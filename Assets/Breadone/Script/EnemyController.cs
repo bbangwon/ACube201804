@@ -21,13 +21,18 @@ public class EnemyController : MonoBehaviour {
 
     GameObject hero;
 
-    public static float initMoveSpeed = 0.8f;
+    public static float initMoveSpeed = 0.75f;
     public static float moveSpeed = 1f;
+    public float mulSpeed = 0f;
 
     public bool isDead = false;
 
     public bool isTouchPlayer = false;
     public float lifeTime = 3f;
+
+    public GameObject prefabAttack;
+
+    public bool wasAttack = false;
 
     // Use this for initialization
     void Start () {
@@ -37,9 +42,11 @@ public class EnemyController : MonoBehaviour {
 
     void OnSpawned(){
         EnemySpawner.Instance.spawnCnt++;
+        mulSpeed = UnityEngine.Random.Range(1f, 1.2f);
         isDead = false;
         isTouchPlayer = false;
         lifeTime = 3f;
+        wasAttack = false;
     }
 
     void OnDespawned(){
@@ -49,6 +56,11 @@ public class EnemyController : MonoBehaviour {
 	private void Update()
 	{
         if(isTouchPlayer){
+            if(wasAttack == false){
+                PoolManager.Pools["ParticlePool"].Spawn(prefabAttack, transform.position, Quaternion.identity);
+                wasAttack = true;
+            }
+
             if(lifeTime >= 0f){
                 lifeTime -= Time.deltaTime;
             }
@@ -61,7 +73,7 @@ public class EnemyController : MonoBehaviour {
 	private void LateUpdate()
     {
         Vector3 dir = (hero.transform.position - transform.position).normalized; 
-        transform.Translate(dir * Time.deltaTime * moveSpeed);
+        transform.Translate(dir * Time.deltaTime * moveSpeed * mulSpeed);
     }
 
     private void OnParticleCollision(GameObject other)

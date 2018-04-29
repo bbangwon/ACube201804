@@ -349,9 +349,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 1
+  mulSpeed: 0
   isDead: 0
   isTouchPlayer: 0
   lifeTime: 3
+  prefabAttack: {fileID: 1620408452532710, guid: b95a9fee232854c6da8ed24da3680fe9,
+    type: 2}
 --- !u!212 &212113278762700550
 SpriteRenderer:
   m_ObjectHideFlags: 1

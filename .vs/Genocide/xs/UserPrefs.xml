@@ -1,19 +1,23 @@
 ﻿<Properties StartupConfiguration="{B9371261-BB4A-6F02-1FBD-2D2AF81A7A7B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ShakeBody.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PYJ/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/PYJ/Scripts/Enum.cs" Line="5" Column="1" />
+      <File FileName="Assets/PYJ/Scripts/Enum.cs" Line="5" Column="2" />
       <File FileName="Assets/PYJ/Scripts/PartsEntity.cs" Line="7" Column="5" />
-      <File FileName="Assets/PYJ/Scripts/InputManager.cs" Line="76" Column="59" />
-      <File FileName="Assets/PYJ/Scripts/GameManager.cs" Line="68" Column="9" />
-      <File FileName="Assets/PYJ/Scripts/SelfDespawn.cs" Line="12" Column="3" />
-      <File FileName="Assets/PYJ/Scripts/UIManager.cs" Line="24" Column="38" />
+      <File FileName="Assets/PYJ/Scripts/InputManager.cs" Line="18" Column="5" />
       <File FileName="Assets/Breadone/Script/EnemySpawner.cs" Line="89" Column="86" />
-      <File FileName="Assets/Breadone/Script/SoundManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/PYJ/Scripts/Player.cs" Line="22" Column="30" />
-      <File FileName="Assets/Breadone/Script/EnemyController.cs" Line="104" Column="1" />
-      <File FileName="Assets/Breadone/Script/HeroPartsChange.cs" Line="39" Column="5" />
-      <File FileName="Assets/Breadone/Script/EndingSceneManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/ShakeBody.cs" Line="9" Column="28" />
+      <File FileName="Assets/Breadone/Script/SoundManager.cs" Line="50" Column="94" />
+      <File FileName="Assets/PYJ/Scripts/Player.cs" Line="31" Column="41" />
+      <File FileName="Assets/Breadone/Script/EnemyController.cs" Line="50" Column="6" />
+      <File FileName="Assets/Breadone/Script/HeroPartsChange.cs" Line="7" Column="35" />
+      <File FileName="Assets/Breadone/Script/EndingSceneManager.cs" Line="16" Column="10" />
+      <File FileName="Assets/ShakeBody.cs" Line="25" Column="71" />
+      <File FileName="Assets/Breadone/Script/TitleSceneManager.cs" Line="42" Column="40" />
+      <File FileName="Assets/Breadone/GJRankSystem/ACubeGameJamRankSystem.cs" Line="6" Column="34" />
+      <File FileName="Assets/Breadone/Script/SelectWeaponSceneManager.cs" Line="44" Column="80" />
+      <File FileName="Assets/PYJ/Scripts/Magic.cs" Line="1" Column="1" />
+      <File FileName="Assets/ThirdParty/StompyRobot/SRDebugger/Scripts/UI/Other/BugReportSheetController.cs" Line="191" Column="13" />
+      <File FileName="Assets/Breadone/Script/HeroWeaponChange.cs" Line="1" Column="1" />
+      <File FileName="Assets/PYJ/Scripts/GameManager.cs" Line="69" Column="121" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

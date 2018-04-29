@@ -28,8 +28,8 @@ public class Player : MonoBehaviour {
 	void Start () {
         InputManager.Instance.EventSwipe += OnSwipe;
 
-        hp = maxHp;
-
+        hp = maxHp = PlayerPrefs.GetFloat("hp");
+        UIManager.Insatnce.textHP.text = hp.ToString();
         StartCoroutine(CoRefreshAbility());
 	}
 

@@ -41,16 +41,22 @@ public class SelectWeaponSceneManager : MonoBehaviour {
         HeroInfo.Instance.HeroName = heroName;
         HeroInfo.Instance.WeaponIndex = itemIndex;
 
-        ACubeGameJamRankSystem.Instance.getOrCreateNickname(heroName, (r) =>
-        {
-            if(r.result)
+        if(PlayerPrefs.GetString("Mod") == "Hard" || PlayerPrefs.GetString("Mod") == "NightMare"){
+            ACubeGameJamRankSystem.Instance.getOrCreateNickname(heroName, (r) =>
             {
-                SceneManager.LoadScene("main");
-            }
-            else
-            {
-                Debug.Log(r.message);
-            }
-        });
+                if (r.result)
+                {
+                    SceneManager.LoadScene("main");
+                }
+                else
+                {
+                    Debug.Log(r.message);
+                }
+            });
+        }
+        else{
+            SceneManager.LoadScene("main");
+        }
+
     }
 }

@@ -10,6 +10,10 @@ public class EndingSceneManager : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+        if (PlayerPrefs.GetString("Mod") == "NightMare")
+        {
+            HeroInfo.Instance.TotalKills = (int)((float)HeroInfo.Instance.TotalKills * 1.1f);
+        }
         gameObject.Child("Image").Child("KillCount").GetComponent<Text>().text = HeroInfo.Instance.TotalKills.ToString();
         gameObject.Child("Name").GetComponent<Text>().text = HeroInfo.Instance.HeroName;
 
@@ -24,11 +28,13 @@ public class EndingSceneManager : MonoBehaviour {
 
         MakeHero();
 
-        ACubeGameJamRankSystem.Instance.postScore(HeroInfo.Instance.HeroName, HeroInfo.Instance.TotalKills, (r) =>
-        {
-            Debug.Log(r.message);
-        });
-
+        if (PlayerPrefs.GetString("Mod") == "Hard" || PlayerPrefs.GetString("Mod") == "NightMare")
+        {            
+            ACubeGameJamRankSystem.Instance.postScore(HeroInfo.Instance.HeroName, HeroInfo.Instance.TotalKills, (r) =>
+            {
+                Debug.Log(r.message);
+            });
+        }
 	}
 	
     void MakeHero()

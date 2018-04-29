@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour {
     public Text textKillCnt;
     public Text textKill;
     public Image panelKill;
+    public Text textName;
+    public Text textHP;
 
     public Text textTimer;
     public Image imgTimer;
@@ -34,6 +36,7 @@ public class UIManager : MonoBehaviour {
 	{
         spawner = FindObjectOfType<EnemySpawner>();
         player = FindObjectOfType<Player>();
+        textName.text = HeroInfo.Instance.HeroName;
 	}
 
 	private void Update()
@@ -69,6 +72,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void UpdateHP(float hp){
+        textHP.text = hp.ToString();
         sliderHP.value = hp / player.maxHp;
     }
 
