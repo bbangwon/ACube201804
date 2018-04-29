@@ -52,7 +52,7 @@ public class HeroPartsChange : MonoBehaviour {
             gameObject.ObserveEveryValueChanged(_ => GameManager.Instance.timer).Where(_ => (int)_ == 20)
                 .Subscribe(_ =>
                 {
-                    if (!time40)
+                    if (!time20)
                     {
                         var maxKillEnemyType = EnemyKillInfo.EnemyKillCount.ToList()
                             .Select((itm, idx) => new { Item = itm, Index = idx }).OrderByDescending(k => k.Item)
