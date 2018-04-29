@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     static GameManager instance;
@@ -61,6 +62,8 @@ public class GameManager : MonoBehaviour {
         {
             HeroInfo.Instance.TotalKills = killCnt;
             HeroInfo.Instance.clearGame = true;
+            SceneManager.LoadScene("Ending");
+            
         }
 
         EnemyController.moveSpeed = EnemyController.initMoveSpeed + ((60 - Instance.timer) * 0.01f) + ((Instance.killCnt / 100) * 0.1f);
