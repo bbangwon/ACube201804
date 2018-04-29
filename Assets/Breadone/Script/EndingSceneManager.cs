@@ -10,7 +10,7 @@ public class EndingSceneManager : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        gameObject.Child("KillCount").GetComponent<Text>().text = HeroInfo.Instance.TotalKills.ToString();
+        gameObject.Child("Image").Child("KillCount").GetComponent<Text>().text = HeroInfo.Instance.TotalKills.ToString();
         gameObject.Child("Name").GetComponent<Text>().text = HeroInfo.Instance.HeroName;
 
         if(HeroInfo.Instance.clearGame)
