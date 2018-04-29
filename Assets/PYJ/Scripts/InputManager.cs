@@ -111,7 +111,7 @@ public class InputManager : MonoBehaviour {
             {
                 endTouchPoint = touch.position;
                 Vector3 diffVector = beginTouchPoint - endTouchPoint;
-                if (diffVector.sqrMagnitude > 1500f)
+                if (diffVector.sqrMagnitude > 1000f)
                 {
                     EventSwipe(-diffVector);
                     isSwiping = false;

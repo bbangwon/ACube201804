@@ -311,10 +311,13 @@
     <Compile Include="Assets\Breadone\GJRankSystem\GJRankSystem.cs" />
     <Compile Include="Assets\Breadone\GJRankSystem\GJRankTest.cs" />
     <Compile Include="Assets\Breadone\Script\BodyArmAnimation.cs" />
+    <Compile Include="Assets\Breadone\Script\EndingSceneManager.cs" />
     <Compile Include="Assets\Breadone\Script\EnemyController.cs" />
+    <Compile Include="Assets\Breadone\Script\EnemyKillInfo.cs" />
     <Compile Include="Assets\Breadone\Script\EnemySpawner.cs" />
     <Compile Include="Assets\Breadone\Script\Explosion.cs" />
     <Compile Include="Assets\Breadone\Script\HeroInfo.cs" />
+    <Compile Include="Assets\Breadone\Script\HeroPartsChange.cs" />
     <Compile Include="Assets\Breadone\Script\HeroWeaponChange.cs" />
     <Compile Include="Assets\Breadone\Script\SelectWeaponSceneManager.cs" />
     <Compile Include="Assets\Breadone\Script\Singleton.cs" />
@@ -322,6 +325,8 @@
     <Compile Include="Assets\Breadone\Script\Test\postAvatarTest.cs" />
     <Compile Include="Assets\Breadone\Script\TitleSceneManager.cs" />
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Hit &amp; Slashes Vol.3\Demo Scene\ButtonAnimation.cs" />
+    <Compile Include="Assets\Hit &amp; Slashes Vol.3\SelfDestruct.cs" />
     <Compile Include="Assets\LINQtoGameObject\Examples\SampleSceneScript.cs" />
     <Compile Include="Assets\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs" />
     <Compile Include="Assets\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs" />
