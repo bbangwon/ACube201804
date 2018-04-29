@@ -6,6 +6,7 @@ using UniRx;
 
 public class SelfDespawn : MonoBehaviour {
     ParticleSystem[] arrParticl;
+    System.IDisposable interval;
 
 	private void Awake()
 	{
@@ -14,7 +15,7 @@ public class SelfDespawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Observable.IntervalFrame(360)
+        interval = Observable.IntervalFrame(360)
                   .First()
                   .Subscribe(_ =>
                   {
@@ -22,4 +23,10 @@ public class SelfDespawn : MonoBehaviour {
                       PoolManager.Pools["ParticlePool"].Despawn(this.transform);
                   });
 	}
+
+    private void OnDestroy()
+    {
+        if (interval != null)
+            interval.Dispose();
+    }
 }

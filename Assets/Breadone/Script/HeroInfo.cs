@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class HeroInfo : Singleton<HeroInfo> {
 
-    public enum PARTS_INDEX
-    {
-        DUCK,
-        JACK,
-        LEGO,
-        NUTCRACKER,
-        ROBOT,
-        SNOWMAN,
-        TREE
-    }
-
     [HideInInspector]
     public string HeroName;
 
@@ -35,7 +24,9 @@ public class HeroInfo : Singleton<HeroInfo> {
 
     [HideInInspector]
     public int parts_weapon;
-    
+
+    [HideInInspector]
+    public bool clearGame;
 
     protected override void Awake()
     {

@@ -559,7 +559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uAE30\uD68D\n\uAE40\uD604\uC9C4 - WTF\n"
+  m_Text: "\uAE30\uD68D\n\uAE40\uD604\uC9C4 - Monster Hunter\n"
 --- !u!222 &443332569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -621,7 +621,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4a9fe60eaea7b463cac722e932355843, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b115d19d2270e42cbada13f757cd4eda, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -696,7 +696,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 45cb1a9c0bf7a43c18c5717cddcc9346, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d0c83e7a845441408bb19ecfe0b578d, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -788,6 +788,10 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: d39da73879122f946a4a620c1664f950, type: 3}
   - whatSound: 0
     audioClip: {fileID: 8300000, guid: f937b27ee4790f548a8db8a21a13ee06, type: 3}
+  - whatSound: 1
+    audioClip: {fileID: 8300000, guid: 62eec0640cde66944b8562c9810292e4, type: 3}
+  - whatSound: 2
+    audioClip: {fileID: 8300000, guid: 7b693ceeaf888db41920f2699c5f952e, type: 3}
 --- !u!4 &635373461
 Transform:
   m_ObjectHideFlags: 0
@@ -1099,7 +1103,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3deee07cc6be94d129c0781a1a6d1dec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae5cfb7f198e24dea9291d685ce431e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1257,7 +1261,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 92c8d5b4793bb41dfbb70d7646720372, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de67727b2f0724f3087ea70988ee5483, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1674,7 +1678,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dfd4812a2e40c4e7b9886fe9781f0823, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0afd7a6b5c76441b8a30f3755900dd5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2142,7 +2146,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7340f01d830194ab7b0c3293f46b999a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62544518ffa9640f4842b6fb6f705d17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -12,8 +12,9 @@ public class SelectWeaponSceneManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-       
-
+        HeroInfo.Instance.parts_head = (int)EnemyController.ENEMY_TYPE.LEGO;
+        HeroInfo.Instance.parts_body = (int)EnemyController.ENEMY_TYPE.LEGO;
+        HeroInfo.Instance.parts_leg = (int)EnemyController.ENEMY_TYPE.LEGO;
     }
 	
 	// Update is called once per frame

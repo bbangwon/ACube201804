@@ -867,8 +867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 40.4}
-  m_SizeDelta: {x: -80.20001, y: -115.4}
+  m_AnchoredPosition: {x: 15, y: 35.35}
+  m_SizeDelta: {x: -80.20001, y: -76.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &466391921
 MonoBehaviour:
@@ -890,17 +890,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 44
+    m_Font: {fileID: 12800000, guid: 359f09295c250ef48812250a383fbeff, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 90
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: KILL!!!
 --- !u!222 &466391922
@@ -1020,12 +1020,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_Font: {fileID: 12800000, guid: 359f09295c250ef48812250a383fbeff, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1184,12 +1184,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_Font: {fileID: 12800000, guid: 359f09295c250ef48812250a383fbeff, type: 3}
+    m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 80
+    m_MinSize: 0
+    m_MaxSize: 120
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1333,7 +1333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000095367, y: -25}
+  m_AnchoredPosition: {x: 0.00000095367, y: -35}
   m_SizeDelta: {x: 479.1, y: 181.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972316323
@@ -1356,12 +1356,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_Font: {fileID: 12800000, guid: 359f09295c250ef48812250a383fbeff, type: 3}
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 90
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.7205882, g: 0.010596896, b: 0.010596896, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1802,11 +1802,11 @@ RectTransform:
   m_Father: {fileID: 1948821707}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000021458, y: 421.62}
-  m_SizeDelta: {x: -1544.9, y: -905.2}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 2.5, y: -30.980042}
+  m_SizeDelta: {x: 380, y: 169.6}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1682128137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,7 +1884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1752474262
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1924,12 +1924,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_Font: {fileID: 12800000, guid: 359f09295c250ef48812250a383fbeff, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 70
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2089,7 +2089,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2335,3 +2335,43 @@ Transform:
   m_PrefabParentObject: {fileID: 4011047213498334, guid: 8f0ebb859e82d4f19b74d2657b25e71d,
     type: 2}
   m_PrefabInternal: {fileID: 2096709127}
+--- !u!114 &2096709131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096709128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e16d533f7ff4e844b72571925c0632f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partsSprites:
+  - {fileID: 21300004, guid: 439904aafbe7eb246884a7b39a71fb51, type: 3}
+  - {fileID: 21300006, guid: 439904aafbe7eb246884a7b39a71fb51, type: 3}
+  - {fileID: 21300000, guid: 439904aafbe7eb246884a7b39a71fb51, type: 3}
+  - {fileID: 21300008, guid: 439904aafbe7eb246884a7b39a71fb51, type: 3}
+  - {fileID: 21300000, guid: 121a99b1a419d6f49819b2baf955b24f, type: 3}
+  - {fileID: 21300004, guid: 121a99b1a419d6f49819b2baf955b24f, type: 3}
+  - {fileID: 21300002, guid: 121a99b1a419d6f49819b2baf955b24f, type: 3}
+  - {fileID: 21300006, guid: 121a99b1a419d6f49819b2baf955b24f, type: 3}
+  - {fileID: 21300000, guid: a3a68de3accd90d40accbcb02fd120e1, type: 3}
+  - {fileID: 21300004, guid: a3a68de3accd90d40accbcb02fd120e1, type: 3}
+  - {fileID: 21300002, guid: a3a68de3accd90d40accbcb02fd120e1, type: 3}
+  - {fileID: 21300006, guid: a3a68de3accd90d40accbcb02fd120e1, type: 3}
+  - {fileID: 21300002, guid: f5aae77db84e32646b17a3e42bc7b171, type: 3}
+  - {fileID: 21300004, guid: f5aae77db84e32646b17a3e42bc7b171, type: 3}
+  - {fileID: 21300000, guid: f5aae77db84e32646b17a3e42bc7b171, type: 3}
+  - {fileID: 21300008, guid: f5aae77db84e32646b17a3e42bc7b171, type: 3}
+  - {fileID: 21300002, guid: 8b5981f2bf928414d9a559f4f0dbf91c, type: 3}
+  - {fileID: 21300004, guid: 8b5981f2bf928414d9a559f4f0dbf91c, type: 3}
+  - {fileID: 21300000, guid: 8b5981f2bf928414d9a559f4f0dbf91c, type: 3}
+  - {fileID: 21300006, guid: 8b5981f2bf928414d9a559f4f0dbf91c, type: 3}
+  - {fileID: 21300002, guid: d1c9219f0a15c9241b5cafd460ff11d4, type: 3}
+  - {fileID: 21300004, guid: d1c9219f0a15c9241b5cafd460ff11d4, type: 3}
+  - {fileID: 21300000, guid: d1c9219f0a15c9241b5cafd460ff11d4, type: 3}
+  - {fileID: 21300006, guid: d1c9219f0a15c9241b5cafd460ff11d4, type: 3}
+  - {fileID: 21300000, guid: bf04a7eb4d4823c49b789d80e6b5f81a, type: 3}
+  - {fileID: 21300006, guid: bf04a7eb4d4823c49b789d80e6b5f81a, type: 3}
+  - {fileID: 21300002, guid: bf04a7eb4d4823c49b789d80e6b5f81a, type: 3}
+  - {fileID: 21300008, guid: bf04a7eb4d4823c49b789d80e6b5f81a, type: 3}

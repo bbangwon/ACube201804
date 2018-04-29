@@ -505,6 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6866825a82395264fb0680b811ad6516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyType: 3
   isDead: 0
   isTouchPlayer: 0
   lifeTime: 3
