@@ -19,8 +19,8 @@ public class Player : MonoBehaviour {
     int particleBurstCnt = 3;
     float particleHalfAngle = 2f;
 
-    public float maxHp = 100f;
-    public float hp = 100f;
+    public float maxHp = 50f;
+    public float hp = 50f;
 
     public bool isDead = false;
 
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour {
         particleStartSpeed = 1 + (killCnt / 10) * 0.1f;
         particleCycleCnt = Mathf.Min(1 + (killCnt / 250), 3);
         particleBurstCnt = 3 + (killCnt / 10) - ((particleCycleCnt - 1) * 10);
-        particleHalfAngle = 2f + (killCnt / 30);
+        particleHalfAngle = Mathf.Min(2f + (killCnt / 35), 85f);
     }
 
     void OnSwipe(Vector3 dir)

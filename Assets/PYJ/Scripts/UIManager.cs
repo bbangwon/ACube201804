@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour {
 
     public Slider sliderHP;
 
+    public GameObject panelCharacter;
+
     EnemySpawner spawner;
 
 	private void Awake()

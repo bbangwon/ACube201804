@@ -53,7 +53,6 @@ public class InputManager : MonoBehaviour {
             {
                 endTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
-            Debug.Log("Window");
         }
 	}
 
@@ -77,7 +76,6 @@ public class InputManager : MonoBehaviour {
                 (Application.platform == RuntimePlatform.OSXEditor) ||
                (Application.platform == RuntimePlatform.OSXPlayer))
             {
-                Debug.Log("hi");
                 if (inputDelay <= 0f)
                 {
                     if (Input.GetMouseButtonDown(0))
@@ -111,7 +109,7 @@ public class InputManager : MonoBehaviour {
             {
                 endTouchPoint = touch.position;
                 Vector3 diffVector = beginTouchPoint - endTouchPoint;
-                if (diffVector.sqrMagnitude > 1000f)
+                if (diffVector.sqrMagnitude > 1200f)
                 {
                     EventSwipe(-diffVector);
                     isSwiping = false;

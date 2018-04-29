@@ -33,6 +33,7 @@ public class HeroPartsChange : MonoBehaviour {
                 {
                     if(!time40)
                     {
+                        UIManager.Insatnce.panelCharacter.SetActive(true);
                         var maxKillEnemyType = EnemyKillInfo.EnemyKillCount.ToList()
                             .Select((itm, idx) => new { Item = itm, Index = idx }).OrderByDescending(k => k.Item)
                             .FirstOrDefault().Index;
