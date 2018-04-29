@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour {
     float deadTime = 1f;
     public bool isSwiping = false;
 
-    public float inputDelay = 0.02f;
+    public float inputDelay = 0.1f;
 
 	private void Awake()
 	{
@@ -39,35 +39,21 @@ public class InputManager : MonoBehaviour {
             isSwiping = false;
         }
 
-        if (isSwiping == false)
+        if (inputDelay > 0f)
         {
-            return;
+            inputDelay -= Time.deltaTime;
         }
 
-        if (Input.touchCount > 0)
+        if ((Application.platform == RuntimePlatform.WindowsEditor) ||
+            (Application.platform == RuntimePlatform.WindowsPlayer) ||
+            (Application.platform == RuntimePlatform.OSXEditor) ||
+           (Application.platform == RuntimePlatform.OSXPlayer))
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Ended)
-            {
-                endTouchPoint = touch.position;
-                Vector3 diffVector = beginTouchPoint - endTouchPoint;
-                if (diffVector.sqrMagnitude > 0.3f)
-                {
-                    EventSwipe(-diffVector);
-                    isSwiping = false;
-                }
-            }
-        }
-        else
-        {
-            if (inputDelay > 0f)
-            {
-                inputDelay -= Time.deltaTime;
-            }
             if (Input.GetMouseButtonUp(0))
             {
                 endTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
+            Debug.Log("Window");
         }
 	}
 
@@ -86,20 +72,51 @@ public class InputManager : MonoBehaviour {
         }
         else
         {
-            if(inputDelay <= 0f){
-                if (Input.GetMouseButtonDown(0))
+            if ((Application.platform == RuntimePlatform.WindowsEditor) ||
+                (Application.platform == RuntimePlatform.WindowsPlayer) ||
+                (Application.platform == RuntimePlatform.OSXEditor) ||
+               (Application.platform == RuntimePlatform.OSXPlayer))
+            {
+                Debug.Log("hi");
+                if (inputDelay <= 0f)
                 {
-                    beginTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                    Vector3 diffVector = transform.position - beginTouchPoint;
-                    if (diffVector.sqrMagnitude > 0.3f)
+                    if (Input.GetMouseButtonDown(0))
                     {
-                        EventSwipe(-diffVector);
-                        isSwiping = false;
+                        beginTouchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                        Vector3 diffVector = transform.position - beginTouchPoint;
+                        if (diffVector.sqrMagnitude > 0.3f)
+                        {
+                            EventSwipe(-diffVector);
+                            isSwiping = false;
+                        }
                     }
+                    inputDelay = 0.1f;
                 }
-                inputDelay = 0.02f;
             }
         }
     }
+
+	private void OnMouseUp()
+	{
+        if (isSwiping == false)
+        {
+            return;
+        }
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Ended)
+            {
+                endTouchPoint = touch.position;
+                Vector3 diffVector = beginTouchPoint - endTouchPoint;
+                if (diffVector.sqrMagnitude > 1500f)
+                {
+                    EventSwipe(-diffVector);
+                    isSwiping = false;
+                }
+            }
+        }
+	}
 }
